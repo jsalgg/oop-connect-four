@@ -21,6 +21,7 @@ button[disabled] {
 button:active {
   background-color: darkred;
 }
+
 input {
   border: 0;
   border-bottom: 2px solid #CCC;
