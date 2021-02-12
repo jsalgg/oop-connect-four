@@ -10,12 +10,14 @@ export class Column {
       }
     }
   }
-  getTokenAt(i) {
-    return this.tokenTracker[i];
+  getTokenAt(rowIndex) {
+    return this.tokenTracker[rowIndex];
   }
   isFull() {
     if (!this.tokenTracker.includes("")) {
       return true;
     }
   }
+  isColumnFull(colIndex) {}
 }
+//test
