@@ -1,5 +1,5 @@
 import { Game } from "./game.js";
-console.log(Game);
+console.log("start code");
 let game;
 const clickTarget = document.getElementById("click-targets");
 
@@ -18,6 +18,7 @@ const updateUI = () => {
     clickTarget.classList.add("red");
     clickTarget.classList.remove("black");
   }
+  //added this part
   for (let i = 0; i < 7; i++) {
     let col = document.getElementById(`column-${i}`);
     if (game.isColumnFull(i)) {

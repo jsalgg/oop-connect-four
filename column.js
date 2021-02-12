@@ -1,4 +1,3 @@
-import { Game } from "./game.js";
 export class Column {
   constructor(tokenTracker = ["", "", "", "", "", ""]) {
     this.tokenTracker = tokenTracker;
@@ -20,4 +19,4 @@ export class Column {
     }
   }
 }
-//test
+//edited this because its where we had isColumnFull

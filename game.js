@@ -20,6 +20,7 @@ export class Game {
       this.currentPlayer = 1;
     }
   }
+  //added this
   isColumnFull(colIndex) {
     return this.columns[colIndex].isFull(this.columns[colIndex]);
   }
