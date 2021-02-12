@@ -1,5 +1,5 @@
 import { Game } from "./game.js";
-console.log(Game)
+console.log(Game);
 let game;
 const clickTarget = document.getElementById("click-targets");
 
@@ -12,13 +12,12 @@ const updateUI = () => {
     document.getElementById("game-name").innerHTML = `${game.getName()}`;
   }
   if (game.currentPlayer === 1) {
-      clickTarget.classList.add("black")
-      clickTarget.classList.remove("red")
-    }
-    else {
-        clickTarget.classList.add("red");
-        clickTarget.classList.remove("black");
-    }
+    clickTarget.classList.add("black");
+    clickTarget.classList.remove("red");
+  } else {
+    clickTarget.classList.add("red");
+    clickTarget.classList.remove("black");
+  }
 };
 window.addEventListener("DOMContentLoaded", (event) => {
   const player1Input = document.getElementById("player-1-name");
@@ -28,8 +27,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   const disableButton = () => {
     newGameButton.disabled = true;
   };
-  
-  
+
   formHolder.addEventListener("keyup", (event) => {
     if (player1Input.value !== "" && player2Input.value !== "") {
       newGameButton.disabled = false;
@@ -38,7 +36,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
     }
   });
 
-  
   newGameButton.addEventListener("click", (event) => {
     event.preventDefault();
     game = new Game(player1Input.value, player2Input.value);
@@ -49,9 +46,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
     updateUI();
   });
 
-   //row above board where you click
+  //row above board where you click
   clickTarget.addEventListener("click", (event) => {
-    game.playInColumn() //switches players
-    updateUI() // refreshes board
+    game.playInColumn(); //switches players
+    updateUI(); // refreshes board
   });
 });

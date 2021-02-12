@@ -13,4 +13,9 @@ export class Column {
   getTokenAt(i) {
     return this.tokenTracker[i];
   }
+  isFull() {
+    if (!this.tokenTracker.includes("")) {
+      return true;
+    }
+  }
 }
